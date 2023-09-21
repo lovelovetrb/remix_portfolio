@@ -18,7 +18,6 @@ type formContent = {
 };
 
 export default function Index() {
-  // TODO: フォームへのfetchを行う
   const googleFormFetch = async (formContent: formContent) => {
     await fetch(
       "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfZQZGFQcOIj74-C-nGznPnCatKjrrTMskVxnpKOtP4IA5ZFg/formResponse",
@@ -31,12 +30,8 @@ export default function Index() {
         body: `entry.1318356055=${formContent.name}&entry.1295676376=${formContent.email}&entry.1428027242=${formContent.body}`,
       }
     )
-      .then((res) => {
-        if (res.ok) {
-          alert("送信しました");
-        } else {
-          alert("送信に失敗しました");
-        }
+      .then(() => {
+        alert("送信しました");
       })
       .catch((err) => alert(`エラーが発生しました: ${err}`));
   };
