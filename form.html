@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>@lovelovetrb</title><meta name="description" content="@lovelovetrb portfolio page build with remix"/><link rel="stylesheet" href="build/css-bundle-EF2NB3R3.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&amp;display=swap"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/><link rel="stylesheet" href="build/_assets/global-Q6I6TJZX.css"/><link rel="stylesheet" href="build/_assets/tailwind-ZFA6JLKK.css"/></head><body><div class="w-screen absolute z-10 text-white" style="opacity:0"><header class="flex items-center justify-between p-5 text-xl lg:text-2xl bg-black"><div class="flex justify-between items-center w-full"><h2 class="lg:text-3xl"><a class="cursor-pointer" href="index.html">@ lovelovetrb</a></h2><div class="block md:hidden"><img src="hamburger.png" alt="hamburger" class="w-[28px] h-[28px]"/></div></div><nav><div class="block md:hidden "></div><ul class="hidden md:flex"><li class="px-1 lg:px-3"><a class="cursor-pointer" href="works.html">Works</a></li><li class="px-1 lg:px-3"><a class="cursor-pointer" href="skills.html">Skills</a></li><li class="px-1 lg:px-3"><a class="cursor-pointer" href="form.html">Contact</a></li></ul></nav></header><div class="md:px-4 md:py-8 m-3 md:m-0 rounded-2xl md:rounded-none "><div class="mx-auto lg:max-w-5xl"><h2 class="lg:text-5xl md:text-3xl text-xl m-5">Contact</h2><div class="bg-white bg-opacity-20 rounded-lg mx-auto p-5"><form class="form"><p class="my-3 text-xl">お名前</p><div class="row"><input type="text" class="w-full" placeholder="◯◯ ◯◯" required=""/></div><p class="my-3 text-xl">メールアドレス</p><div class="row"><input type="email" class="w-full" placeholder="example@example.com" required=""/></div><p class="my-3 text-xl">本文</p><div class="row"><textarea class="w-full h-[10em]" placeholder="お問い合わせ内容" required=""></textarea></div><div class="text-center"><input class="bg-white bg-opacity-60 rounded-xl mt-3 py-3 px-5 text-black" type="submit" value="送信"/></div></form></div></div></div></div><div id="tsparticles"><canvas style="width:100%;height:100%"></canvas></div><script>((STORAGE_KEY, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({
+        key
+      }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(STORAGE_KEY);
+    }
+  })("positions", null)</script><link rel="modulepreload" href="build/entry.client-KBSUAM44.js"/><link rel="modulepreload" href="build/_shared/chunk-ZWGWGGVF.js"/><link rel="modulepreload" href="build/_shared/chunk-GIAAE3CH.js"/><link rel="modulepreload" href="build/_shared/chunk-DNEICAPH.js"/><link rel="modulepreload" href="build/_shared/chunk-JPUYSU3G.js"/><link rel="modulepreload" href="build/_shared/chunk-XU7DNSPJ.js"/><link rel="modulepreload" href="build/_shared/chunk-BOXFZXVX.js"/><link rel="modulepreload" href="build/_shared/chunk-UWV35TSL.js"/><link rel="modulepreload" href="build/_shared/chunk-PNG5AS42.js"/><link rel="modulepreload" href="build/_shared/chunk-7A2YMHIB.js"/><link rel="modulepreload" href="build/root-KTKRLC2J.js"/><link rel="modulepreload" href="build/_shared/chunk-I4AOATCP.js"/><link rel="modulepreload" href="build/routes/form-6AZQWFAB.js"/><script>window.__remixContext = {"url":"/form","state":{"loaderData":{"root":null,"routes/form":null},"actionData":null,"errors":null},"future":{"v2_dev":true,"unstable_postcss":false,"unstable_tailwind":false,"v2_errorBoundary":true,"v2_headers":true,"v2_meta":true,"v2_normalizeFormMethod":true,"v2_routeConvention":true}};</script><script type="module" async="">import "/build/_shared/chunk-JPUYSU3G.js";import "/build/manifest-B2D35793.js";
+import * as route0 from "/build/root-KTKRLC2J.js";
+import * as route1 from "/build/routes/form-6AZQWFAB.js";
+window.__remixRouteModules = {"root":route0,"routes/form":route1};
+
+import("/build/entry.client-KBSUAM44.js");</script><script>
+                function remixLiveReloadConnect(config) {
+                  let REMIX_DEV_ORIGIN = "http://localhost:3001/";
+                  let protocol =
+                    REMIX_DEV_ORIGIN ? new URL(REMIX_DEV_ORIGIN).protocol.replace(/^http/, "ws") :
+                    location.protocol === "https:" ? "wss:" : "ws:"; // remove in v2?
+                  let hostname = location.hostname;
+                  let url = new URL(protocol + "//" + hostname + "/socket");
+
+                  url.port =
+                    undefined ||
+                    REMIX_DEV_ORIGIN ? new URL(REMIX_DEV_ORIGIN).port :
+                    Number(8002) ||
+                    8002;
+
+                  let ws = new WebSocket(url.href);
+                  ws.onmessage = async (message) => {
+                    let event = JSON.parse(message.data);
+                    if (event.type === "LOG") {
+                      console.log(event.message);
+                    }
+                    if (event.type === "RELOAD") {
+                      console.log("💿 Reloading window ...");
+                      window.location.reload();
+                    }
+                    if (event.type === "HMR") {
+                      if (!window.__hmr__ || !window.__hmr__.contexts) {
+                        console.log("💿 [HMR] No HMR context, reloading window ...");
+                        window.location.reload();
+                        return;
+                      }
+                      if (!event.updates || !event.updates.length) return;
+                      let updateAccepted = false;
+                      let needsRevalidation = new Set();
+                      for (let update of event.updates) {
+                        console.log("[HMR] " + update.reason + " [" + update.id +"]")
+                        if (update.revalidate) {
+                          needsRevalidation.add(update.routeId);
+                          console.log("[HMR] Revalidating [" + update.routeId + "]");
+                        }
+                        let imported = await import(update.url +  '?t=' + event.assetsManifest.hmr.timestamp);
+                        if (window.__hmr__.contexts[update.id]) {
+                          let accepted = window.__hmr__.contexts[update.id].emit(
+                            imported
+                          );
+                          if (accepted) {
+                            console.log("[HMR] Updated accepted by", update.id);
+                            updateAccepted = true;
+                          }
+                        }
+                      }
+                      if (event.assetsManifest && window.__hmr__.contexts["remix:manifest"]) {
+                        let accepted = window.__hmr__.contexts["remix:manifest"].emit(
+                          { needsRevalidation, assetsManifest: event.assetsManifest }
+                        );
+                        if (accepted) {
+                          console.log("[HMR] Updated accepted by", "remix:manifest");
+                          updateAccepted = true;
+                        }
+                      }
+                      if (!updateAccepted) {
+                        console.log("[HMR] Updated rejected, reloading...");
+                        window.location.reload();
+                      }
+                    }
+                  };
+                  ws.onopen = () => {
+                    if (config && typeof config.onOpen === "function") {
+                      config.onOpen();
+                    }
+                  };
+                  ws.onclose = (event) => {
+                    if (event.code === 1006) {
+                      console.log("Remix dev asset server web socket closed. Reconnecting...");
+                      setTimeout(
+                        () =>
+                          remixLiveReloadConnect({
+                            onOpen: () => window.location.reload(),
+                          }),
+                      1000
+                      );
+                    }
+                  };
+                  ws.onerror = (error) => {
+                    console.log("Remix dev asset server web socket error:");
+                    console.error(error);
+                  };
+                }
+                remixLiveReloadConnect();
+              </script></body></html>
