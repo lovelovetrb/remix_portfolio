@@ -1,5 +1,8 @@
 import BurguerMenu from "./BurgerMenu";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpotify } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 type Menu = {
   name: string;
@@ -51,6 +54,16 @@ const Header = () => {
               </a>
             </li>
           ))}
+          <li className="px-1 lg:px-3">
+            <a href="https://twitter.com/lovelovetrb">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li className="px-1 lg:px-3">
+            <a href="https://open.spotify.com/playlist/63Dbjp91jpIPPunSSFsV1j?si=zYn2u5EIQBORCH6bopKmxA&nd=1">
+              <FontAwesomeIcon icon={faSpotify} />
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
