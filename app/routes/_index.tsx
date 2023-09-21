@@ -1,5 +1,5 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import Background from "~/components/background";
+import Background from "~/components/Background";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";

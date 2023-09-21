@@ -1,5 +1,5 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import Background from "~/components/background";
+import Background from "~/components/Background";
 import { works } from "~/data/works";
 import WorkCard from "~/components/WorkCard";
 
