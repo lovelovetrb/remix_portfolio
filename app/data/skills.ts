@@ -30,9 +30,19 @@ export const skills = [
     deviconClassName: "devicon-python-plain-wordmark",
   },
   {
-    name: "pytorch",
-    lank: 1,
-    deviconClassName: "devicon-pytorch-plain-wordmark",
+    name: "PyTorch",
+    lank: 2,
+    deviconClassName: "devicon-pytorch-original",
+  },
+  {
+    name: "C++",
+    lank: 2,
+    deviconClassName: "devicon-cplusplus-plain",
+  },
+  {
+    name: "Arduino",
+    lank: 2,
+    deviconClassName: "devicon-arduino-plain-wordmark",
   },
   {
     name: "vim",

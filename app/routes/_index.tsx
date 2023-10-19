@@ -3,6 +3,7 @@ import Background from "~/components/Background";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -42,7 +43,7 @@ export default function Index() {
             />
             <div className="mt-5 lg:ml-10 flex flex-col">
               <h2 className="lg:text-3xl text-xl mt-5 text-center lg:text-left">
-                馬場 海好 (Mizuki Baba)
+                馬場 海好 (RISUman)
                 <br className="block md:hidden" />
                 <a
                   className="cursor-pointer text-xl ml-3"
@@ -59,6 +60,14 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a
+                  className="cursor-pointer text-xl  ml-3"
+                  href="https://lovelovetrb.fanbox.cc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faCircleInfo} />
                 </a>
               </h2>
               <table className="mt-5 lg:mt-10">
