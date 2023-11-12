@@ -2,6 +2,8 @@ import type { V2_MetaFunction } from "@remix-run/node";
 import Background from "~/components/Background";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,6 +18,24 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
+  const calcAge = () => {
+    const birthday = new Date("2002/5/29");
+    const today = new Date();
+
+    let age = today.getFullYear() - birthday.getFullYear();
+
+    // 誕生月より前の場合、または誕生月であっても日にちがまだ来ていない場合は1歳減らす
+    if (
+      today.getMonth() < birthday.getMonth() ||
+      (today.getMonth() === birthday.getMonth() &&
+        today.getDate() < birthday.getDate())
+    ) {
+      age--;
+    }
+
+    return age;
+  };
+
   const profile = [
     {
       title: "job",
@@ -23,25 +43,61 @@ export default function Index() {
     },
     {
       title: "major",
-      content: "informatics / Natural Language Proceccing",
+      content: "informatics",
     },
     {
       title: "age",
-      content: `${new Date().getFullYear() - 2002} years old`,
+      content: `${calcAge()} years old`,
     },
   ];
+
+  const [isHover, setIsHover] = useState(false);
+  const variant = {
+    initial: { opacity: 0 },
+    enter: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
 
   return (
     <>
       <Background styleName="right">
         <div className="my-10 md:my-20 mx-1 p-3">
-          <div className="flex mt-10 lg:mt-20 flex-col lg:flex-row">
-            <img
-              src="icon.jpeg"
-              alt="icon"
-              className="w-3/4 md:w-1/3 rounded-[50%] mx-auto"
-            />
-            <div className="mt-5 lg:ml-10 flex flex-col">
+          <div className="flex flex-col lg:flex-row">
+            <div
+              onPointerDown={() => setIsHover((IsHover) => !IsHover)}
+              className="min-h-[225px] lg:min-w-[50%] min-w-[200px] rounded-[50%] mx-auto relative text-center"
+            >
+              <AnimatePresence>
+                {!isHover && (
+                  <motion.img
+                    key="icon"
+                    src="icon.jpeg"
+                    variants={variant}
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                    transition={{ duration: 0.25 }}
+                    className="min-h-[200px] w-auto lg:h-[90%] rounded-[50%] absolute lg:left-1/2 lg:transform lg:translate-x-[-50%]"
+                  />
+                )}
+                {isHover && (
+                  <motion.img
+                    key="icon_risu"
+                    src="icon_risu.png"
+                    variants={variant}
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                    transition={{ duration: 0.25 }}
+                    className="min-h-[200px] w-auto lg:h-[90%] rounded-[50%] absolute lg:left-1/2 lg:transform lg:translate-x-[-50%]"
+                  />
+                )}
+                <p className="absolute bottom-0 text-center w-full text-sm">
+                  {isHover ? "Twitterのすがた" : ""}
+                </p>
+              </AnimatePresence>
+            </div>
+            <div className="lg:ml-10 flex flex-col">
               <h2 className="lg:text-3xl text-xl mt-5 text-center lg:text-left">
                 馬場 海好 (RISUman)
                 <br className="block md:hidden" />
@@ -70,7 +126,15 @@ export default function Index() {
                   <FontAwesomeIcon icon={faCircleInfo} />
                 </a>
               </h2>
+              <p className="mt-5">
+                自然言語処理を研究する研究室に所属している大学生です。
+                最近は、M5Stackを用いた開発にハマり、悪戦苦闘しながら楽しく開発しています。
+                <br />
+                <br />
+                ラーメンが好きです。<br />コールは「野菜少なめ、にんにく、アブラ」
+              </p>
               <table className="mt-5 lg:mt-10">
+                <thead className="text-xl">about</thead>
                 <tbody>
                   {profile.map((item) => (
                     <tr key={item.title} className="text-md lg:text-lg">
