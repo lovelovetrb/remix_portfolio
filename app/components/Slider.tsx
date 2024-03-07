@@ -1,12 +1,12 @@
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import type { Image }  from "../types";
 
 const divStyle = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   backgroundSize: "cover",
-  height: "400px",
 };
 
 const properties = {
@@ -22,10 +22,6 @@ const properties = {
   ),
 };
 
-type Image = {
-  src: string;
-  alt: string;
-};
 
 type Props = {
   images: Image[];
@@ -37,7 +33,7 @@ const Slideshow = ({ images }: Props) => {
       {images.length > 1 ? (
         <Slide {...properties}>
           {images.map((slideImage: Image, index: number) => (
-            <div key={index}>
+            <div key={index} style={divStyle}>
               <img src={slideImage.src} alt={slideImage.alt} />
             </div>
           ))}

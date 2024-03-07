@@ -1,5 +1,25 @@
 export const works = [
   {
+    prize: "Open Hack U 2024 Tokyo 優秀賞",
+    title: "ほいくるーず",
+    description:
+      "「ほいくるーず」は、園児の乗降を顔識別で管理し、園児のバス置き去り問題の防止や忘れ物防止や保護者への通園状況の共有を目的としたアプリです。バスのリアルタイム位置情報表示や、簡単な操作での欠席連絡機能を備え、保育園と保護者の双方の通園に関する不安や悩みを解決します。機械学習とユーザーフレンドリーなインターフェースを駆使して、園児の安全と保護者の利便性の向上を図っています。",
+    image: [
+      { src: "/works/hackutokyo2024/1.png", alt: "ほいくる〜ず アイコン" },
+      {
+        src: "/works/hackutokyo2024/2.png",
+        alt: "バス乗降通知についてのスライド",
+      },
+      {
+        src: "/works/hackutokyo2024/3.png",
+        alt: "マップビューについてのスライド",
+      },
+      { src: "/works/hackutokyo2024/4.png", alt: "システム構成図" },
+      { src: "/works/hackutokyo2024/5.png", alt: "メンバー表" },
+    ],
+    github: "https://github.com/lovelovetrb/ES_Harmony",
+  },
+  {
     prize: "技育展2023決勝大会進出",
     title: "ES Harmony",
     description:
@@ -9,7 +29,7 @@ export const works = [
       { src: "/works/es_harmony_description.png", alt: "ES Harmony" },
     ],
     demo: "https://es-harmony.vercel.app/",
-    github: "https://github.com/lovelovetrb/ES_Harmony"
+    github: "https://github.com/lovelovetrb/ES_Harmony",
   },
   {
     prize: "優秀賞受賞",
