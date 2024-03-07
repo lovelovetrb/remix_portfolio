@@ -2,12 +2,13 @@ import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slider from "./Slider";
+import type { Image }  from "../types";
 
 type Work = {
   prize?: string;
   title: string;
   description: string;
-  image: string;
+  image: Image[];
   github?: string;
   twitter?: string;
   demo?: string;
@@ -21,8 +22,8 @@ const WorkCard = ({ work }: { work: Work }) => {
     background: "rgba(0,0,0,0.5)",
     color: "white",
     padding: "0.5rem",
-    fontSize: "1.5rem",
   };
+
   return (
     <div className="bg-white bg-opacity-20 rounded-lg mx-auto my-5 p-5 w-11/12 relative">
       {work.prize && (
