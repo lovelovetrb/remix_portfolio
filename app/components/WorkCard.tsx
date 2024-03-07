@@ -27,7 +27,7 @@ const WorkCard = ({ work }: { work: Work }) => {
   return (
     <div className="bg-white bg-opacity-20 rounded-lg mx-auto my-5 p-5 w-11/12 relative">
       {work.prize && (
-        <div style={prizeStyle} className="absolute text-sm md:text-md text-xl">
+        <div style={prizeStyle} className="absolute text-sm md:text-md lg:text-2xl">
           {work.prize}
         </div>
       )}
