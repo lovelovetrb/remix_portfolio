@@ -1,12 +1,12 @@
 export const skills = [
   {
     name: "React",
-    lank: 4,
+    lank: 3,
     deviconClassName: "devicon-react-original-wordmark",
   },
   {
     name: "NEXT.js",
-    lank: 4,
+    lank: 3,
     deviconClassName: "devicon-nextjs-original-wordmark",
   },
   {
@@ -16,7 +16,7 @@ export const skills = [
   },
   {
     name: "JavaScript",
-    lank: 4,
+    lank: 3,
     deviconClassName: "devicon-javascript-plain",
   },
   {
@@ -26,13 +26,18 @@ export const skills = [
   },
   {
     name: "Python",
-    lank: 3,
+    lank: 4,
     deviconClassName: "devicon-python-plain-wordmark",
   },
   {
     name: "PyTorch",
-    lank: 2,
+    lank: 4,
     deviconClassName: "devicon-pytorch-original",
+  },
+  {
+    name: "Flutter",
+    lank: 1,
+    deviconClassName: "devicon-flutter-plain",
   },
   {
     name: "C++",
@@ -66,7 +71,7 @@ export const skills = [
   },
   {
     name: "Google Cloud Platform",
-    lank: 1,
+    lank: 2,
     deviconClassName: "devicon-googlecloud-plain-wordmark",
   },
   {
