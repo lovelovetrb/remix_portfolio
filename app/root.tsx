@@ -5,7 +5,7 @@ import { cssBundleHref } from "@remix-run/css-bundle";
 
 import { AnimatePresence, motion } from "framer-motion";
 
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, V2_MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -46,6 +46,16 @@ export const links: LinksFunction = () => [
     href: tailwindcss,
   },
 ];
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    {
+      "twitter:card": "summary_image",
+    },
+    { "og:description": "HP Logo" },
+    { "og:image": "twitter_card.png" },
+  ];
+};
 
 export default function App() {
   return (
