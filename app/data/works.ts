@@ -17,7 +17,8 @@ export const works = [
       { src: "/works/hackutokyo2024/4.png", alt: "システム構成図" },
       { src: "/works/hackutokyo2024/5.png", alt: "メンバー表" },
     ],
-    github: "https://github.com/lovelovetrb/ES_Harmony",
+    github: "https://github.com/GreenTeaProgrammers/WhereChildBus",
+    news: "https://www.inf.shizuoka.ac.jp/news/detail.html?CN=154914"
   },
   {
     prize: "技育展2023決勝大会進出",
