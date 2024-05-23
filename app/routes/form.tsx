@@ -28,7 +28,7 @@ export default function Index() {
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: `entry.1318356055=${formContent.name}&entry.1295676376=${formContent.email}&entry.1428027242=${formContent.body}`,
-      }
+      },
     )
       .then(() => {
         alert("送信しました");

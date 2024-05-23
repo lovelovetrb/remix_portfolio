@@ -1,8 +1,8 @@
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faHome, faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Slider from "./Slider";
-import type { Image } from "../types";
+import Slider from "~/components/Slider";
+import type { Image } from "~/types";
 
 type Work = {
   prize?: string;

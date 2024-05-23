@@ -15,8 +15,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import styles from "./styles/global.css";
-import tailwindcss from "./styles/tailwind.css";
+import styles from "~/styles/global.css";
+import tailwindcss from "~/styles/tailwind.css";
 // This ensures that the icon CSS is loaded immediately before attempting to render icons
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
