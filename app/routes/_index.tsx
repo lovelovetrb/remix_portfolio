@@ -127,7 +127,8 @@ export default function Index() {
                 </a>
               </h2>
               <p className="mt-5">
-                自然言語処理を研究する研究室に所属している大学生です。<br />
+                自然言語処理を研究する研究室に所属している大学生です。
+                <br />
                 機械学習・電子工作・Web開発など幅広く興味があります。
               </p>
               <table className="mt-5 lg:mt-10">
