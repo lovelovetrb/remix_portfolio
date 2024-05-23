@@ -65,6 +65,7 @@ export default function Index() {
           <div className="flex flex-col lg:flex-row">
             <div
               onPointerDown={() => setIsHover((IsHover) => !IsHover)}
+              onMouseEnter={() => setIsHover((IsHover) => !IsHover)}
               className="min-h-[225px] lg:min-w-[50%] min-w-[200px] rounded-[50%] mx-auto relative text-center"
             >
               <AnimatePresence>
