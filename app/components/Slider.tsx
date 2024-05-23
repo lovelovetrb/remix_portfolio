@@ -1,6 +1,6 @@
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import type { Image }  from "../types";
+import type { Image } from "~/types";
 
 const divStyle = {
   display: "flex",
@@ -21,7 +21,6 @@ const properties = {
     </button>
   ),
 };
-
 
 type Props = {
   images: Image[];
