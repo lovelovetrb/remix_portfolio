@@ -1,4 +1,4 @@
-import Header from "~/components/Heaeder";
+import Header from "~/components/Header";
 import CustomParticles from "~/components/CustomParticles";
 
 import { cssBundleHref } from "@remix-run/css-bundle";
@@ -49,22 +49,22 @@ export const links: LinksFunction = () => [
 
 export default function App() {
   return (
-    <html lang="ja" className="h-full">
+    <html lang="ja">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body className="h-full">
+      <body className="text-white">
+        <Header />
         <AnimatePresence mode="wait">
           <motion.div
-            className="w-screen absolute z-10 text-white"
+            className="w-screen absolute z-10 mt-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <Header />
             <Outlet />
           </motion.div>
         </AnimatePresence>
