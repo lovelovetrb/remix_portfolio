@@ -13,13 +13,21 @@ module.exports = {
     sourceType: "module",
     project: "./tsconfig.json",
   },
+  globals: {
+    React: true,
+    JSX: true,
+  },
   rules: {
-    "no-undef": ["error", { ignore: ["React", "JSX"] }],
     "no-restricted-imports": [
       "error",
       {
         patterns: ["./", "../"],
       },
     ],
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
   },
 };
