@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo, faBlog } from "@fortawesome/free-solid-svg-icons";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -119,6 +119,14 @@ export default function Index() {
                 </a>
                 <a
                   className="cursor-pointer text-xl  ml-3"
+                  href="https://risu-note.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faBlog} />
+                </a>
+                <a
+                  className="cursor-pointer text-xl  ml-3"
                   href="https://lovelovetrb.fanbox.cc/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -127,7 +135,8 @@ export default function Index() {
                 </a>
               </h2>
               <p className="mt-5">
-                自然言語処理を研究する研究室に所属している大学生です。<br />
+                自然言語処理を研究する研究室に所属している大学生です。
+                <br />
                 機械学習・電子工作・Web開発など幅広く興味があります。
               </p>
               <table className="mt-5 lg:mt-10">
