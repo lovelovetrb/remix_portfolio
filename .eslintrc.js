@@ -4,6 +4,7 @@ module.exports = {
     "@remix-run/eslint-config",
     "@remix-run/eslint-config/node",
     "eslint-config-prettier",
+    "eslint:recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -13,6 +14,7 @@ module.exports = {
     project: "./tsconfig.json",
   },
   rules: {
+    "no-undef": ["error", { ignore: ["React", "JSX"] }],
     "no-restricted-imports": [
       "error",
       {
