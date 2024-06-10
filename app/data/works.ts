@@ -18,7 +18,7 @@ export const works = [
       { src: "/works/hackutokyo2024/5.png", alt: "メンバー表" },
     ],
     github: "https://github.com/GreenTeaProgrammers/WhereChildBus",
-    news: "https://www.inf.shizuoka.ac.jp/news/detail.html?CN=154914",
+    news: "https://www.inf.shizuoka.ac.jp/news/2413/"
   },
   {
     prize: "技育展2023決勝大会進出",
