@@ -1,4 +1,4 @@
-import Star from "./Star";
+import Star from "~/components/Star";
 
 type Skill = {
   name: string;

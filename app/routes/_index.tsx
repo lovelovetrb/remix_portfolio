@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo, faBlog } from "@fortawesome/free-solid-svg-icons";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -65,6 +65,7 @@ export default function Index() {
           <div className="flex flex-col lg:flex-row">
             <div
               onPointerDown={() => setIsHover((IsHover) => !IsHover)}
+              onMouseEnter={() => setIsHover((IsHover) => !IsHover)}
               className="min-h-[225px] lg:min-w-[50%] min-w-[200px] rounded-[50%] mx-auto relative text-center"
             >
               <AnimatePresence>
@@ -119,6 +120,14 @@ export default function Index() {
                 </a>
                 <a
                   className="cursor-pointer text-xl  ml-3"
+                  href="https://risu-note.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faBlog} />
+                </a>
+                <a
+                  className="cursor-pointer text-xl  ml-3"
                   href="https://lovelovetrb.fanbox.cc/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -128,10 +137,8 @@ export default function Index() {
               </h2>
               <p className="mt-5">
                 自然言語処理を研究する研究室に所属している大学生です。
-                最近は、M5Stackを用いた開発にハマり、悪戦苦闘しながら楽しく開発しています。
                 <br />
-                <br />
-                ラーメンが好きです。<br />コールは「野菜少なめ、にんにく、アブラ」
+                機械学習・電子工作・Web開発など幅広く興味があります。
               </p>
               <table className="mt-5 lg:mt-10">
                 <thead className="text-xl">about</thead>

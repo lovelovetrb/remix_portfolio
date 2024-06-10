@@ -19,7 +19,6 @@ export const works = [
     ],
     github: "https://github.com/GreenTeaProgrammers/WhereChildBus",
     news: "https://www.inf.shizuoka.ac.jp/news/2413/"
-
   },
   {
     prize: "技育展2023決勝大会進出",

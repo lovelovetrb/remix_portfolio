@@ -1,8 +1,8 @@
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Slider from "./Slider";
-import type { Image }  from "../types";
+import Slider from "~/components/Slider";
+import type { Image } from "~/types";
 
 type Work = {
   prize?: string;
@@ -11,6 +11,7 @@ type Work = {
   image: Image[];
   github?: string;
   twitter?: string;
+  news?: string;
   demo?: string;
 };
 
@@ -48,6 +49,13 @@ const WorkCard = ({ work }: { work: Work }) => {
           <a href={work.github} target="_blank" rel="noopener noreferrer">
             <div className="text-xl">
               <FontAwesomeIcon icon={faGithub} />
+            </div>
+          </a>
+        )}
+        {work.news && (
+          <a href={work.news} target="_blank" rel="noopener noreferrer">
+            <div className="text-xl">
+              <FontAwesomeIcon icon={faNewspaper} />
             </div>
           </a>
         )}
