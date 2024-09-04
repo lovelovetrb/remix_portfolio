@@ -10,11 +10,6 @@ export const skills = [
     deviconClassName: "devicon-nextjs-original-wordmark",
   },
   {
-    name: "Gatsby",
-    lank: 2,
-    deviconClassName: "devicon-gatsby-plain-wordmark",
-  },
-  {
     name: "JavaScript",
     lank: 3,
     deviconClassName: "devicon-javascript-plain",
@@ -35,13 +30,23 @@ export const skills = [
     deviconClassName: "devicon-pytorch-original",
   },
   {
+    name: "go",
+    lank: 1,
+    deviconClassName: "devicon-go-original-wordmark",
+  },
+  {
+    name: "gRPC",
+    lank: 1,
+    deviconClassName: "devicon-grpc-plain",
+  },
+  {
     name: "Flutter",
     lank: 1,
     deviconClassName: "devicon-flutter-plain",
   },
   {
     name: "C++",
-    lank: 2,
+    lank: 1,
     deviconClassName: "devicon-cplusplus-plain",
   },
   {
@@ -50,9 +55,9 @@ export const skills = [
     deviconClassName: "devicon-arduino-plain-wordmark",
   },
   {
-    name: "vim",
+    name: "NeoVim",
     lank: 3,
-    deviconClassName: "devicon-vim-plain",
+    deviconClassName: "devicon-neovim-plain",
   },
   {
     name: "git",
@@ -61,7 +66,7 @@ export const skills = [
   },
   {
     name: "docker",
-    lank: 1,
+    lank: 2,
     deviconClassName: "devicon-docker-plain-wordmark",
   },
   {
@@ -75,7 +80,7 @@ export const skills = [
     deviconClassName: "devicon-googlecloud-plain-wordmark",
   },
   {
-    name: "Arch Linux",
+    name: "Linux",
     lank: 3,
     deviconClassName: "devicon-linux-plain",
   },
