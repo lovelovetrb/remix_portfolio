@@ -38,7 +38,9 @@ const Slideshow = ({ images }: Props) => {
           ))}
         </Slide>
       ) : (
-        <img src={images[0].src} alt={images[0].alt} />
+        <div style={divStyle}>
+          <img src={images[0].src} alt={images[0].alt} />
+        </div>
       )}
     </div>
   );
