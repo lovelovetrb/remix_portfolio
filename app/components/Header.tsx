@@ -14,10 +14,6 @@ const menuList: HeaderMenu[] = [
     url: "/works",
   },
   {
-    content: "Skills",
-    url: "/skills",
-  },
-  {
     content: "Contact",
     url: "/form",
   },

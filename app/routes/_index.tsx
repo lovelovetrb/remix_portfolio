@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faCircleInfo, faBlog } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -38,16 +39,16 @@ export default function Index() {
 
   const profile = [
     {
-      title: "job",
-      content: "College Student",
+      title: "所属",
+      content: "静岡大学大学院 情報学専攻(M1)",
     },
     {
-      title: "major",
-      content: "informatics",
+      title: "年齢",
+      content: `${calcAge()}歳`,
     },
     {
-      title: "age",
-      content: `${calcAge()} years old`,
+      title: "趣味",
+      content: "サウナ・カメラ・釣り・FPVドローン",
     },
   ];
 
@@ -124,11 +125,11 @@ export default function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faBlog} />
+                  <FontAwesomeIcon icon={faEnvelope} />
                 </a>
                 <a
                   className="cursor-pointer text-xl  ml-3"
-                  href="https://lovelovetrb.fanbox.cc/"
+                  href="mailto:info@lovelovetrb.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -141,7 +142,7 @@ export default function Index() {
                 機械学習・電子工作・Web開発など幅広く興味があります。
               </p>
               <table className="mt-5 lg:mt-10">
-                <thead className="text-xl">about</thead>
+                <thead className="text-xl">プロフィール</thead>
                 <tbody>
                   {profile.map((item) => (
                     <tr key={item.title} className="text-md lg:text-lg">
