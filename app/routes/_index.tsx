@@ -3,7 +3,6 @@ import Background from "~/components/Background";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -52,7 +51,6 @@ export default function Index() {
     },
   ];
 
-  const [isHover, setIsHover] = useState(false);
   const variant = {
     initial: { opacity: 0 },
     enter: { opacity: 1 },
@@ -65,38 +63,19 @@ export default function Index() {
         <div className="my-10 md:my-20 mx-1 p-3">
           <div className="flex flex-col lg:flex-row">
             <div
-              onPointerDown={() => setIsHover((IsHover) => !IsHover)}
-              onMouseEnter={() => setIsHover((IsHover) => !IsHover)}
               className="min-h-[225px] lg:min-w-[50%] min-w-[200px] rounded-[50%] mx-auto relative text-center"
             >
               <AnimatePresence>
-                {!isHover && (
-                  <motion.img
-                    key="icon"
-                    src="icon.jpeg"
-                    variants={variant}
-                    initial="initial"
-                    animate="enter"
-                    exit="exit"
-                    transition={{ duration: 0.25 }}
-                    className="min-h-[200px] w-auto lg:h-[90%] rounded-[50%] absolute lg:left-1/2 lg:transform lg:translate-x-[-50%]"
-                  />
-                )}
-                {isHover && (
-                  <motion.img
-                    key="icon_risu"
-                    src="icon_risu.png"
-                    variants={variant}
-                    initial="initial"
-                    animate="enter"
-                    exit="exit"
-                    transition={{ duration: 0.25 }}
-                    className="min-h-[200px] w-auto lg:h-[90%] rounded-[50%] absolute lg:left-1/2 lg:transform lg:translate-x-[-50%]"
-                  />
-                )}
-                <p className="absolute bottom-0 text-center w-full text-sm">
-                  {isHover ? "Twitterのすがた" : ""}
-                </p>
+                <motion.img
+                  key="icon"
+                  src="icon.jpeg"
+                  variants={variant}
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                  transition={{ duration: 0.25 }}
+                  className="min-h-[200px] w-auto lg:h-[90%] rounded-[50%] absolute lg:left-1/2 lg:transform lg:translate-x-[-50%]"
+                />
               </AnimatePresence>
             </div>
             <div className="lg:ml-10 flex flex-col">
