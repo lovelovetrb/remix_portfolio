@@ -104,7 +104,7 @@ export default function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faEnvelope} />
+                  <FontAwesomeIcon icon={faCircleInfo} />
                 </a>
                 <a
                   className="cursor-pointer text-xl  ml-3"
@@ -112,7 +112,7 @@ export default function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faCircleInfo} />
+                  <FontAwesomeIcon icon={faEnvelope} />
                 </a>
               </h2>
               <p className="mt-5">
