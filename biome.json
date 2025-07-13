@@ -1,7 +1,10 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
 	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-	"files": { "ignoreUnknown": false },
+	"files": {
+		"ignoreUnknown": true,
+		"includes": ["**", "!**/api/**/*", "!**/public/**/*"]
+	},
 	"formatter": { "enabled": true, "indentStyle": "tab" },
 	"linter": {
 		"enabled": true,
