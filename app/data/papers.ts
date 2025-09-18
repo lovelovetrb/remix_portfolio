@@ -1,5 +1,18 @@
 export const papers = [
 	{
+		prize: "YANS2025 ポスター発表",
+		title:
+			"事前学習済みTransformerモデルにおける隠れ層間冗長性の解析とバイパス機構の探索",
+		description: "馬場 海好, 狩野 芳伸(静岡大学)",
+		image: [
+			{
+				src: "/papers/yans2025_poster.png",
+				alt: "事前学習済みTransformerモデルにおける隠れ層間冗長性の解析とバイパス機構の探索",
+			},
+		],
+		news: "/papers/yans2025_poster.pdf",
+	},
+	{
 		prize: "JSAI2024 発表論文",
 		title:
 			"日本語事前学習済みBERTの言語学的機能による差分入力を用いたAttentionヘッド別機能分析",
