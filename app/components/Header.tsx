@@ -23,7 +23,7 @@ const menuList: HeaderMenu[] = [
 	},
 	{
 		content: <FontAwesomeIcon icon={faTwitter} />,
-		url: "https://twitter.com/lovelovetrb",
+		url: "https://twitter.com/lovelovetrb_com",
 	},
 	{
 		content: <FontAwesomeIcon icon={faSpotify} />,
