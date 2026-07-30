@@ -81,7 +81,7 @@ export default function Index() {
 								<br className="block md:hidden" />
 								<a
 									className="cursor-pointer text-xl ml-3"
-									href="https://twitter.com/lovelovetrb"
+									href="https://twitter.com/lovelovetrb_com"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
