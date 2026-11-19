@@ -1,5 +1,6 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import {
 	Links,
 	LiveReload,
@@ -7,6 +8,7 @@ import {
 	Outlet,
 	Scripts,
 	ScrollRestoration,
+	useLoaderData,
 } from "@remix-run/react";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -46,7 +48,13 @@ export const links: LinksFunction = () => [
 	},
 ];
 
+export const loader = async () => {
+	return json({ gaTrackingId: process.env.GA_TRACKING_ID });
+};
+
 export default function App() {
+	const { gaTrackingId } = useLoaderData<typeof loader>();
+
 	return (
 		<html lang="ja">
 			<head>
@@ -56,6 +64,26 @@ export default function App() {
 				<Links />
 			</head>
 			<body className="text-white">
+				{process.env.NODE_ENV === "development" || !gaTrackingId ? null : (
+					<>
+						<script
+							async
+							src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+						/>
+						<script
+							id="gtag-init"
+							// biome-ignore lint/security/noDangerouslySetInnerHtml: GA4初期化スクリプト
+							dangerouslySetInnerHTML={{
+								__html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaTrackingId}');
+`,
+							}}
+						/>
+					</>
+				)}
 				<Header />
 				<AnimatePresence mode="wait">
 					<motion.div
