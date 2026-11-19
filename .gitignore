@@ -10,6 +10,7 @@ node_modules
 /public/build
 /api/index.js
 /api/index.js.map
+/api/metafile.*.json
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/remix+vercel,macos,linux,vim,visualstudiocode
@@ -68,6 +69,7 @@ Temporary Items
 .output
 /api/index.js
 /api/index.js.map
+/api/metafile.*.json
 
 ### Vim ###
 # Swap
